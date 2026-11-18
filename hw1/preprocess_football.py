@@ -9,7 +9,7 @@ os.makedirs(OUT_DIR, exist_ok=True)
 
 # 保留关键字段
 keep_cols = [
-    "Date", "Time", "HomeTeam", "AwayTeam",
+    "Date", "HomeTeam", "AwayTeam",
     "FTHG", "FTAG", "FTR", "HTHG", "HTAG", "HTR",
     "Referee", "HS", "AS", "HST", "AST",
     "HF", "AF", "HC", "AC", "HY", "AY", "HR", "AR",
@@ -99,7 +99,7 @@ out = raw.drop(columns=["Date"])
 out.to_csv(
     os.path.join(OUT_DIR, "football_cleaned.csv"),
     index=False,
-    encoding="utf-8-sig"
+    encoding="utf-8"
 )
 
 print("清洗后行数：", out.shape)
