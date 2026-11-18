@@ -1,0 +1,1 @@
+mongoimport --db sports_db --collection football_matches --type csv --headerline --file football_cleaned.csv
